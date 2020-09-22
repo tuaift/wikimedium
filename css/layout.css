@@ -1,10 +1,9 @@
 body {
-  font-family: 'PT Sans Caption', sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
-h1, h2, h3, h4, p, ul, li {
+
+h1, h2, h3, h4, p, ul, li, blockquote {
   margin: 28px auto;
   width: 800px;
 }
@@ -48,10 +47,31 @@ h4 {
   font-size: 26pt;
 }
 
-p {
+ul {
+  list-style-type: disc;
+  font-size: 18pt;
+}
+
+p, blockquote, li {
   font-size: 18pt;
   line-height: 34px;
   margin-bottom: 52px;
+}
+
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+
+blockquote::before {
+  content: "";
+  background: black;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  display: block;
+  left: -17px;
+  top: 0;
 }
 
 .last_paragraph {
