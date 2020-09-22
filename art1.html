@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    	* {
+    		transition: all .8s ease;
+    	}
+
+    	*:hover {
+    		transition: all .1s ease;
+    	}
+
+    	.red {
+    		width: 300px;
+    		height: 300px;
+    		background: red;
+    		border-radius: 50%;
+    		position: absolute;
+    		left: 400px;
+
+    	}
+
+      	.black {
+      		width: 60px;
+      		height: 300px;
+      		transform: rotate(-35deg);
+      		background: black;
+      		position: absolute;
+      		left: 200px;
+      		z-index: 1;
+      		opacity: .1;
+      	}
+
+      	.black:hover {
+      		width: 120px;
+      		opacity: 1;
+      	}
+
+      	.orange {
+      		width: 200px;
+	      	height: 200px;
+	      	background: orange;
+	      	position: absolute;
+	      	left: 300px;
+	      	top: 200px;
+      	}
+
+      	.orange:hover {
+      		transform: rotate(95deg);
+      	}
+
+    </style>
+  </head>
+  <body>
+    <div class="red"></div>
+    <div class="black"></div>
+    <div class="orange"></div>
+  </body>
+</html>
