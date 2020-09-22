@@ -1,0 +1,33 @@
+nav {
+  width: 300px
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 30px;
+  opacity: .1;
+  overflow: hidden;
+  transition: all .8s ease-out;
+}
+
+nav:hover {
+  opacity: 1;
+  transition: all .1s ease-out;
+}
+
+nav > a {
+  text-decoration: underline;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+
+nav > li {
+  margin: 10px 0;
+}
+
+nav > ul > ul {
+  margin-left: 30px;
+
+}
