@@ -2,60 +2,72 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-
-h1, h2, h3, h4, p, ul, li, blockquote {
-  margin: 28px auto;
-  width: 800px;
+h1, h2, h3, p, ul, blockquote {
+  width: 700px;
+  margin: 0 auto;
 }
 
-img {
-  display: block;
-  width: 1020px;
-  margin: 90px auto;
-}
-
-h1 {
-  font-size: 42pt;
-  line-height: 45px;
-  margin-top: 80px;
-  margin-bottom: 36px;
+h1, h2, h3 {
+  font-family: 'PT Sans Caption', sans-serif;
   font-weight: bold;
 }
 
+a {
+  color: inherit;
+}
+
+h1 {
+  margin-top: 67px;
+  font-size: 38px;
+  line-height: 45px;
+}
+
 h1 + p {
-  color: rgba(0,0,0,.4);
-  font-size: 20pt;
+  margin-top: 8px;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 22px;
   line-height: 32px;
+  color: rgba(0,0,0,.4);
+}
+
+h1 + p + p {
+  margin-top: 30px;
 }
 
 h2 {
-  font-size: 34pt;
+  margin-top: 43px;
+  font-size: 32px;
   line-height: 36px;
-  margin-bottom: 28px;
+  color: rgba(0, 0, 0, .8);
 }
 
-h2 + h3 {
-  margin-top: 56px;
+h2 + p,
+h2 + blockquote {
+  margin-top: 7px;
 }
 
 h3 {
-  font-size: 30pt;
+  margin-top: 36px;
+  font-size: 28px;
   line-height: 34px;
+  color: rgba(0, 0, 0, .8);
 }
 
-h4 {
-  font-size: 26pt;
+h3 + p,
+h3 + blockquote {
+  margin-top: 6px;
 }
 
 ul {
   list-style-type: disc;
-  font-size: 18pt;
+  padding-left: 50px;
+  /* list-style-position: inside; */
 }
 
 p, blockquote, li {
-  font-size: 18pt;
+  margin-top: 29px;
+  font-size: 20px;
   line-height: 34px;
-  margin-bottom: 52px;
 }
 
 blockquote {
@@ -63,35 +75,41 @@ blockquote {
   position: relative;
 }
 
+
 blockquote::before {
-  content: "";
+  content: '';
+  position: absolute;
+  display: block;
   background: black;
   width: 3px;
   height: 100%;
-  position: absolute;
-  display: block;
   left: -17px;
-  top: 0;
+}
+
+img {
+  display: block;
+  width: 1020px;
+  margin: 79px auto 0;
+}
+
+img + h2 {
+  margin-top: 79px;
+}
+
+img + p,
+img + blockquote,
+img + ul {
+  margin-top: 77px;
+}
+
+h2 + img {
+  margin-top: 82px;
+}
+
+h3 + img {
+  margin-top: 81px;
 }
 
 .last_paragraph {
   margin-bottom: 80px;
-}
-
-.citation {
-  font-style: italic;
-}
-
-p.citation {
-  border-left: 3px solid black;
-  padding-left: 17px;
-  width: 817px;
-}
-
-.text_bold {
-  font-weight: bold;
-}
-
-.add_bullet_40 {
-  margin-bottom: 40px;
 }
