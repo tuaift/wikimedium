@@ -1,5 +1,23 @@
-article > p,
-article > li,
-article > blockquote {
-  
+article img {
+  display: block;
+  width: 1020px;
+  margin: 79px auto 0;
+}
+
+article img + h2 {
+  margin-top: 79px;
+}
+
+article img + p,
+article img + blockquote,
+article img + ul {
+  margin-top: 77px;
+}
+
+article h2 + img {
+  margin-top: 82px;
+}
+
+article h3 + img {
+  margin-top: 81px;
 }
