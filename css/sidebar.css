@@ -39,6 +39,7 @@ nav li {
 
  nav a {
   text-decoration: none;
+  color: inherit;
 }
 
 nav > ul > ul {
