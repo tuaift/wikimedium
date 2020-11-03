@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <title></title>
@@ -10,18 +11,20 @@
         height: 3253px;
         position: relative;
       }
-      
+
       body {
-        width: 1440px;
-        height: 100%;
         display: block;
         margin: 0 auto;
-        background: white;
+        padding: 0;
+        width: 1280px;
+        height: 100%;
+      	background: #white;
+      	overflow-x: hidden;
       }
 
       body::before{
         content: '';
-        /* background: url('images/1440.jpg'); */
+        background: url('images/1440.jpg');
         opacity: .1;
         position: absolute;
         top: 0;
