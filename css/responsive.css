@@ -1,3 +1,31 @@
+/* @media all and (min-width: 1440px) {
+  body { min-width: 1440px; }
+}
+
+@media all and (min-device-width: 1920px) {
+  body { min-width: 1920px; }
+}
+
+@media all and (min-device-width: 2560px) {
+  body { min-width: 2560px; }
+}
+
+@media all and (max-width: 1440px) {
+  .about2-left img { height: 82%; }
+}*/
+
+@media all and (min-width: 1280px) {
+  body { min-width: 100%; }
+}
+
+
+@media all and (min-device-width: 1790px) {
+  body { min-width: 1792px; }
+  .about h1, .bottom_block h1 { font-size: 32px; }
+  .about1-right { width: 70%; }
+  .about3-right { width: 70%; }
+}
+
 @media all and (max-width: 1340px) {
   .sidebar { display: none; }
 }

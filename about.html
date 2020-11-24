@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="css/style.css">
     <title></title>
     <style media="screen">
-      html {
-        background: #bbb;
+      /* html {
+        background: white;
         height: 3253px;
         position: relative;
-      }
+      }*/
 
       body {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 220px auto;
         padding: 0;
         width: 1280px;
         height: 100%;
-      	background: #white;
+      	background: white;
       	overflow-x: hidden;
       }
 
-      body::before{
+      /* body::before{
         content: '';
         background: url('images/1440.jpg');
         opacity: .1;
@@ -31,7 +31,7 @@
         left: 0;
         right: 0;
         height: 100%;
-      }
+      }*/
 
       section {
         display: flex;
@@ -74,6 +74,11 @@
       section:nth-of-type(2) p {
         margin: 16px 0 8px;
         width: 540px;
+      }
+
+      .about2-left {
+        display: flex;
+        justify-content: flex-end;
       }
 
       .about2-left img{
@@ -127,6 +132,21 @@
         background: black;
         border-color: black;
       }
+
+      @media all and (min-device-width: 1790px) {
+        body { width: 100%; }
+        .about img { width: 90%; }
+      }
+
+      @media all and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+        body { min-width: 1024px; }
+        section {flex-direction: column;}
+        section div { width: 100%; display: flex; flex-direction: column; align-items: center; padding: 0;}
+        section div * { align-self: center;}
+        .about2 {flex-direction: column-reverse;}
+        .about2-left img { margin-top: 80px;}
+      }
+
     </style>
   </head>
   <body>
@@ -134,16 +154,16 @@
       <a href="index.html"><img src="images/logo.svg" alt=""></a>
       <a href="about.html">О проекте</a>
     </div>
-    <section>
-      <div>
+    <section class="about">
+      <div class="about1-left">
         <h1>Наглядный пример, <br>чтобы учиться веб-вёрстке</h1>
         <p>Разработан для изучения основ веб-вёрстки, языка гипертекстовой разметки HTML и каскадных таблиц стилей CSS</p>
       </div>
-      <div>
+      <div class="about1-right">
         <img src="images/about1.png" alt="">
       </div>
     </section>
-    <section>
+    <section class="about about2">
       <div class="about2-left">
         <img src="images/about2.png" alt="">
       </div>
@@ -152,7 +172,7 @@
         <p>Чтобы начать изучать веб-вёрстку на этом проекте, не требуется каких-то специальных знаний, кроме базового умения пользоваться компьютером</p>
       </div>
     </section>
-    <section class="about3">
+    <section class="about about3">
       <div class="about3-left">
         <h1>Реальный проект, реальный рабочий процесс</h1>
         <p>Обучение приближено к работе в реальной жизни, работа разбита на этапы от типографики, создания меню и использования эффектов,

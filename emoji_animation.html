@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .emoji {
+      width: 160px;
+      height: 160px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .chih {
+      background: url('images/emoji_shake_160.png');
+      animation: sneeze 1s cubic-bezier(1,.24,1,.52) infinite;
+      animation-play-state: paused;
+    }
+
+    .chih .emoji-e {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('images/emoji_shake_160.png');
+      background-position: -160px top;
+    }
+
+    .chih .emoji-m {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('images/emoji_shake_160.png');
+      background-position: -640px top;
+    }
+
+    .meh {
+      animation: meh 1s steps(1) infinite;
+      animation-play-state: paused;
+    }
+
+    .shrink {
+      animation: shrink 1s steps(1) infinite;
+      animation-play-state: paused;
+    }
+
+    .chih:hover,
+    .chih:hover .meh,
+    .chih:hover .shrink {
+      animation-play-state: running;
+    }
+
+    .orbit {
+      height: 110px;
+      width: 320px;
+      top: 0px;
+      left: 320px;
+      position: relative;
+      animation: circle-path 4s linear infinite;
+    }
+
+    .shaking {
+      height: 110px;
+      width: 320px;
+      top: 0px;
+      left: 330px;
+      position: relative;
+      animation: shake 4s cubic-bezier(.36,.07,.19,.97) both;
+    }
+
+    .cry {
+      position: relative;
+      background: url('images/emoji_crying_160.png');
+      margin-left: 4vw;
+    }
+
+    .cry .emoji-e {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('images/emoji_crying_160.png');
+      background-position: -160px top;
+    }
+
+    .cry .emoji-drop {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('images/emoji_crying_160.png');
+      background-position: -320px top;
+    }
+
+    .cry .emoji-m {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('images/emoji_crying_160.png');
+      background-position: -480px top;
+      animation: kiss .5s steps(1) infinite;
+    }
+
+    .anti-orbit {
+      width: 160px;
+      height: 160px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      animation: circle-path 2s linear reverse infinite;
+    }
+
+    @keyframes shake {
+      10%, 90% {transform: translate3d(-1px, 0, 0);}
+      20%, 80% {transform: translate3d(2px, 0, 30px);}
+      30%, 50%, 70% {transform: translate3d(-4px, 0, -3px);}
+      40%, 60% {transform: translate3d(4px, 0, 0);}
+    }
+    @keyframes shake {
+      0%, 50% {transform: translate(-1px, 2px);}
+      25% {top: 40px;}
+      75% {top: 30px;}
+      100% {top: 50px;}
+    }
+
+    @keyframes vertical-float {
+      0% {transform: translateY(0px);}
+      50% {transform: translateY(320px);}
+      100% {transform: translateY(0px);}
+    }
+
+    @keyframes circle-path {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
+    }
+
+    @keyframes kiss {
+      0% {background-position: -480px top;}
+      50% {background-position: -640px top;}
+    }
+
+
+    @keyframes meh {
+      0% {background-position: -640px top;}
+      15% {background-position: -800px top;}
+      20% {background-position: -960px top;}
+    }
+
+    @keyframes shrink {
+      0% {background-position: -160px top;}
+      15% {background-position: -320px top;}
+      20% {background-position: -480px top;}
+    }
+
+    @keyframes sneeze {
+      0% {transform: translateY(0);}
+      20% {transform: translateX(2px) translateY(40px);}
+      30% {transform: translateX(-4px) translateY(50px);}
+      40% {transform: translateX(4px) translateY(60px);}
+      50% {transform: translateX(-4px) translateY(60px);}
+      60% {transform: translateX(4px) translateY(60px);}
+      70% {transform: translateX(-4px) translateY(60px);}
+      80% {transform: translateX(2px) translateY(60px);}
+      100% {transform: translateX(0) translateY(60px);}
+    }
+
+    /* @keyframes sneeze-shake {
+      20%, 80% {transform: translate(2px, 0);}
+      30%, 50%, 70% {transform: translate(-4px, 0);}
+      40%, 60% {transform: translate(4px, 0);}
+    }*/
+
+
+    </style>
+  </head>
+  <body>
+    <div class="emoji chih">
+      <div class="emoji-e shrink"></div>
+      <div class="emoji-m meh"></div>
+    </div>
+    <div class="orbit">
+      <div class="anti-orbit">
+        <div class="emoji cry">
+          <div class="emoji-e"></div>
+          <div class="emoji-drop"></div>
+          <div class="emoji-m"></div>
+        </div>
+      </div>
+    </div>
+    <div class="shaking">
+      <div class="emoji cry" style="animation: vertical-float 4s ease-in-out infinite">
+        <div class="emoji-e"></div>
+        <div class="emoji-drop"></div>
+        <div class="emoji-m"></div>
+      </div>
+    </div>
+  </body>
+</html>
